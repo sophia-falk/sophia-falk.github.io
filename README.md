@@ -1,4 +1,4 @@
-# Hello World!
+# Hello!
 
 I am Sophia Falk, and this is my [personal website](https://sophia-falk.github.io/)!
 
