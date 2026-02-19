@@ -16,11 +16,6 @@ section {
   margin-left: 100px;
 }
 
-/* Override specific sections that need different backgrounds */
-.section-image {
-  background: #151515 url(...) no-repeat center center;
-  /* Other properties */
-}
 
 #about {
   position: relative;
