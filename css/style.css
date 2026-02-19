@@ -54,6 +54,14 @@ body {
 
 h1 {
   font-weight: bold;
+  font-size: 2.0em;
+}
+
+h4 {
+  font-family: "Andale Mono", monospace;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #333;
 }
 
 h5 {
@@ -248,11 +256,13 @@ section {
 
 
 /* 02. FIRST PAGE STYLING
+old background picture
+https://images.unsplash.com/photo-1517174637803-6929e01b6e63?auto=format&fit=crop&q=80&w=1888&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
  * =================================================================== */
 
 .section-image {
   background: #151515
-    url(https://images.unsplash.com/photo-1517174637803-6929e01b6e63?auto=format&fit=crop&q=80&w=1888&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+    url(../img/BackgroundOption2.png)
     no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -379,7 +389,7 @@ section {
 }
 
 .profilepic {
-  height: 150px;
+  height: 190px;
   width: auto;
   border-radius: 300px;
 }
@@ -450,6 +460,12 @@ section {
   height: 4px;
   background-color: #d1d600;
 }
+
+/* Override for materiality section only */
+#materiality-section .section-title {
+  margin-bottom: 15px;
+}
+
 
 
 
@@ -672,10 +688,14 @@ footer .col-md-4 {
     text-align: center;
     padding-bottom: 100px;
   }
+/* 
+Old background picture
+https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+ */
 
-  #research {
+#research {
     background: #151515
-      url(https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+      url(../img/BackgroundOption3.png)
       no-repeat center center;
     background-position: top center;
   }
@@ -877,4 +897,131 @@ footer .col-md-4 {
   .publications-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* YouTube Talks Section */
+
+.video-thumbnail-link {
+  display: block;
+  text-decoration: none;
+}
+
+.video-thumbnail-wrapper {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.video-thumbnail-wrapper img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.video-thumbnail-wrapper:hover img {
+  opacity: 0.75;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-size: 2.5em;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  padding-left: 5px;
+}
+
+.video-thumbnail-wrapper:hover .play-button {
+  background: #C76E00;
+}
+
+.video-caption {
+  text-align: center;
+  margin-top: 12px;
+  font-style: italic;
+  color: #888;
+  font-size: 0.9em;
+}
+
+.talks-list {
+  list-style: none;
+  padding: 0;
+}
+
+.talks-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.talks-list li:last-child {
+  border-bottom: none;
+}
+
+.talks-list a {
+  color: #C76E00;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.2s ease;
+}
+
+.talks-list a:hover {
+  color: #a05800;
+  text-decoration: underline;
+}
+
+
+/* Hugging Face Tool Button */
+.hf-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  background-color: #C76E00;
+  color: #fff !important;
+  font-family: "Andale Mono", monospace;
+  font-size: 1em;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hf-button:hover {
+  background-color: #a05800;
+  color: #fff !important;
+  transform: translateY(-2px);
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+/* Materiality of AI image */
+.materiality-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.materiality-img-title {
+  margin-bottom: 13px;
+  color: #333;
+}
+
+.materiality-img-caption {
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+  color: #888;
+  text-align: center;
 }
